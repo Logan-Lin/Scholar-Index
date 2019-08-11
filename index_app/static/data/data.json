@@ -1,0 +1,35 @@
+{
+  "title": "Yan Lin",
+  "name": {
+    "cn_name": "林彦",
+    "en_name": "Yan Lin"
+  },
+  "photo": "/static/image/photo.png",
+  "intro-links": {
+    "email": "linyan@bjtu.edu.cn",
+    "scholar": "https://loganlin.top",
+    "others": [["GitHub", "https://github.com/Logan-Lin"]]
+  },
+  "publications": {
+    "Technique Reports": [
+      {
+        "title": "A PyTorch Semantic Segmentation Toolbox",
+        "authors": ["Zilong Huang", "Yunchao Wei", "Yan Lin", "Wenyu Liu"],
+        "to": "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019",
+        "links": [["PDF", "https://loganlin.top"], ["Code", "https://loganlin.top"]]
+      },
+      {
+        "title": "CCNet: Criss-Cross Attention for Semantic Segmentation",
+        "authors": ["Yan Lin", "Yunchao Wei", "Wenyu Liu"]
+      }
+    ],
+    "2019": [
+      {
+        "title": "CCNet: Criss-Cross Attention for Semantic Segmentation",
+        "authors": ["Chang Huang", "Yunchao Wei", "Yan Lin"],
+        "links": [["arxiv", "https://loganlin.top"], ["Code", "https://loganlin.top"]],
+        "note": "We provide PyTorch implementations for DeeplabV3 and PSPNet."
+      }
+    ]
+  }
+}

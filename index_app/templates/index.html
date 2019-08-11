@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data['title'] }}</title>
+    <link rel="stylesheet" href="/static/module/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/module/mdui/js/mdui.min.js"></script>
+    <script src="/static/module/jquery-3.3.1.min.js"></script>
+</head>
+<body class="mdui-appbar-with-toolbar mdui-theme-accent-indigo mdui-color-grey-100">
+    <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
+        <div class="mdui-toolbar">
+            <div class="mdui-typo-headline">{{ data['title'] }} Scholar Page</div>
+        </div>
+    </header>
+    <div class="mdui-container-fluid" id="main-container">
+        <div class="mdui-row">
+            <div class="mdui-col-xs-3">
+                <img class="mdui-img-fluid mdui-img-rounded mdui-shadow-2 mdui-hoverable" src="{{ data['photo'] }}">
+            </div>
+            <div class="mdui-col-xs-9">
+                <div class="mdui-card mdui-hoverable">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">{{ data['name']['en_name'] }} {{ data['name']['cn_name'] }}</div>
+                    </div>
+                    <div class="mdui-card-content mdui-typo">{{intro | safe}}</div>
+                    <div class="mdui-card-actions">
+                        <a class="mdui-btn mdui-ripple" href="mailto:{{data['intro-links']['email']}}">
+                            <i class="mdui-icon material-icons">email</i>
+                            {{data['intro-links']['email']}}
+                        </a>
+                        <a class="mdui-btn mdui-ripple" href="{{data['intro-links']['scholar']}}" target="_blank">
+                            <i class="mdui-icon material-icons">school</i>
+                            Google Scholar
+                        </a>
+                        {% for intro_link in data['intro-links']['others'] %}
+                        <a class="mdui-btn mdui-ripple" href="{{intro_link[1]}}" target="_blank">{{intro_link[0]}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-row"><div class="mdui-col-xs-12">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Open Positions</div></div>
+                <div class="mdui-card-content mdui-typo">{{open_positions | safe}}</div>
+            </div>
+        </div></div>
+        <div class="mdui-row"><div class="mdui-col-xs-12">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Research Interests</div></div>
+                <div class="mdui-card-content mdui-typo">{{interests | safe}}</div>
+            </div>
+        </div></div>
+        <div class="mdui-divider-dark"></div>
+        <div class="mdui-row"><div class="mdui-col-xs-12">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">News</div></div>
+                <div class="mdui-card-content mdui-typo" id="news-content">{{news | safe}}</div>
+            </div>
+        </div></div>
+        <div class="mdui-divider-dark"></div>
+        <div class="mdui-row"><div class="mdui-col-xs-12">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Publications</div></div>
+                <div class="mdui-card-content" id="publications-content">{{publications | safe}}</div>
+            </div>
+        </div></div>
+        <div class="mdui-row"><div class="mdui-col-xs-12">
+            <div class="mdui-card mdui-hoverable">
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Selected Award</div></div>
+                <div class="mdui-card-content mdui-typo">{{award | safe}}</div>
+            </div>
+        </div></div>
+    </div>
+</body>
+<script src="/static/js/index.js"></script>
+</html>
