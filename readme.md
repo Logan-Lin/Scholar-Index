@@ -1,5 +1,7 @@
 # 学者首页框架
 
+## [示例](http://loganlin.top:8080)
+
 ## 特点
 
 - 仅需修改JSON文件和Markdown文件即可实现内容的更新
