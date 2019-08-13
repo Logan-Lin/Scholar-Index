@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ data['title'] }}</title>
+    <title>{{data['title']}}</title>
     <link rel="stylesheet" href="/static/module/mdui/css/mdui.min.css">
     <link rel="stylesheet" href="/static/css/index.css">
     <script src="/static/module/mdui/js/mdui.min.js"></script>
@@ -11,9 +11,10 @@
 <body class="mdui-appbar-with-toolbar mdui-theme-accent-indigo mdui-color-grey-100">
     <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
         <div class="mdui-toolbar">
-            <div class="mdui-typo-headline">{{ data['title'] }} Scholar Page</div>
+            <div class="mdui-typo-headline">{{data['title']}} Scholar Page</div>
         </div>
     </header>
+
     <div class="mdui-container-fluid" id="main-container">
         <div class="mdui-row">
             <div class="mdui-col-xs-3">
@@ -22,7 +23,7 @@
             <div class="mdui-col-xs-9">
                 <div class="mdui-card mdui-hoverable">
                     <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">{{ data['name']['en_name'] }} {{ data['name']['cn_name'] }}</div>
+                        <div class="mdui-card-primary-title">{{data['name']['en_name']}} {{data['name']['cn_name']}}</div>
                     </div>
                     <div class="mdui-card-content mdui-typo">{{intro | safe}}</div>
                     <div class="mdui-card-actions">
@@ -41,37 +42,20 @@
                 </div>
             </div>
         </div>
-
+        {% for content_meta in contents %}
         <div class="mdui-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
-                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Open Positions</div></div>
-                <div class="mdui-card-content mdui-typo">{{open_positions | safe}}</div>
+                <div class="mdui-card-primary"><div class="mdui-card-primary-title">{{content_meta[1]}}</div></div>
+                <div class="mdui-card-content mdui-typo" id="{{content_meta[0]}}-content">
+                    {{content_meta[2] | safe}}
+                </div>
             </div>
         </div></div>
-        <div class="mdui-row"><div class="mdui-col-xs-12">
-            <div class="mdui-card mdui-hoverable">
-                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Research Interests</div></div>
-                <div class="mdui-card-content mdui-typo">{{interests | safe}}</div>
-            </div>
-        </div></div>
-        <div class="mdui-divider-dark"></div>
-        <div class="mdui-row"><div class="mdui-col-xs-12">
-            <div class="mdui-card mdui-hoverable">
-                <div class="mdui-card-primary"><div class="mdui-card-primary-title">News</div></div>
-                <div class="mdui-card-content mdui-typo" id="news-content">{{news | safe}}</div>
-            </div>
-        </div></div>
-        <div class="mdui-divider-dark"></div>
+        {% endfor %}
         <div class="mdui-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
                 <div class="mdui-card-primary"><div class="mdui-card-primary-title">Publications</div></div>
                 <div class="mdui-card-content" id="publications-content">{{publications | safe}}</div>
-            </div>
-        </div></div>
-        <div class="mdui-row"><div class="mdui-col-xs-12">
-            <div class="mdui-card mdui-hoverable">
-                <div class="mdui-card-primary"><div class="mdui-card-primary-title">Selected Award</div></div>
-                <div class="mdui-card-content mdui-typo">{{award | safe}}</div>
             </div>
         </div></div>
     </div>

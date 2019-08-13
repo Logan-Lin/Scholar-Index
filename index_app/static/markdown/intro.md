@@ -1,1 +1,4 @@
-I am currently a Postdoc Researcher in Prof. [Thomas Huang](https://www.ece.illinois.edu/directory/profile/t-huang1)'s [Image Formation and Professing (IFP)](http://ifp-uiuc.github.io/) group at Beckman Institute, University of Illinois Urbana-Champaign (UIUC). I received PhD from Beijing Jiaotong University, advised by Prof. Zhao Yao. I was a Visiting Student from Nov. 2013 to Nov. 2015 in the Learning and Vision (LV) Research Group of National University of Singapore (NUS), working with Prof. Shuicheng	Yan. I was a Postdoc Researcher from July 2016 to Sept.2017 in the LV Research Group of NUS, working with Prof. Jiashi Feng.
+<!-- **Assistant Professor**<br>
+**School of Computer and Information Technology**<br>
+**Beijing Jiaotong University**<br> -->
+##### Assistant Professor<br>School of Computer and Information Technology<br>Beijing Jiaotong University

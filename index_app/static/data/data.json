@@ -1,20 +1,21 @@
 {
-  "title": "Yan Lin",
+  "title": "Huaiyu Wan",
   "name": {
-    "cn_name": "林彦",
-    "en_name": "Yan Lin"
+    "cn_name": "万怀宇",
+    "en_name": "Huaiyu Wan"
   },
   "photo": "/static/image/photo.png",
   "intro-links": {
-    "email": "linyan@bjtu.edu.cn",
-    "scholar": "https://loganlin.top",
-    "others": [["GitHub", "https://github.com/Logan-Lin"]]
+    "email": "hywan@bjtu.edu.cn",
+    "scholar": "about:blank",
+    "others": [["Address", "https://surl.amap.com/ZDRIfd1ubb6"], 
+      ["GitHub", "https://github.com/wanhuaiyu"]]
   },
   "publications": {
     "Technique Reports": [
       {
         "title": "A PyTorch Semantic Segmentation Toolbox",
-        "authors": ["Zilong Huang", "Yunchao Wei", "Yan Lin", "Wenyu Liu"],
+        "authors": ["Zilong Huang", "Huaiyu Wan", "Yan Lin", "Wenyu Liu"],
         "to": "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019",
         "links": [["PDF", "https://loganlin.top"], ["Code", "https://loganlin.top"]]
       },
@@ -31,5 +32,32 @@
         "note": "We provide PyTorch implementations for DeeplabV3 and PSPNet."
       }
     ]
-  }
+  },
+  "contents": [
+    {
+      "title": "Short Bio",
+      "file_name": "bio.md",
+      "id": "bio"
+    },
+    {
+      "title": "Research Interests",
+      "file_name": "interests.md",
+      "id": "interests"
+    },
+    {
+      "title": "News",
+      "file_name": "news.md",
+      "id": "news"
+    },
+    {
+      "title": "Research Experience & Academic Services",
+      "file_name": "research.md",
+      "id": "research"
+    },
+    {
+      "title": "Main Admin Duty",
+      "file_name": "duty.md",
+      "id": "duty"
+    }
+  ]
 }

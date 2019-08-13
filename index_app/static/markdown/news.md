@@ -1,3 +1,3 @@
-I'm going to co-organize the workshop "Weakly Supervised Learning for Real-World Computer Vision Applications and the 1st Learning from Imperfect Data (LID) Challenge" on CVPR 2019. More details please refer to [link](https://lidchallenge.github.io/).
+This is a demo news.
 
-I'm going to co-organize the workshop "Augmented Human: Human-centric Understanding and 2D/3D Synthesis, and the third Look Into Person (LIP) Challenge" on CVPR 2019. More details please refer to [link](https://vuhcs.github.io/).
+Note that every news need to be in a seperate paragraph in this markdown file.

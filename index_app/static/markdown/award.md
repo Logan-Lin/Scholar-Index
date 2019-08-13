@@ -1,2 +1,0 @@
-- 2018 The Winner Prizes of All Human Parsing Tasks in the 2nd LIP Challenge
-- 2017 The Runnerup Prizes of All Video Object Detection/Tracking Tasks in ILSVRC

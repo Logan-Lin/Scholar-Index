@@ -12,8 +12,13 @@ data = json.load(open('/workdir/index_app/static/data/data.json', 'r'))
 
 @bp.route('/')
 def index():
-    return render_template('index.html', data=data, open_positions=utils.build_markdown('open_positions.md'),
-        intro=utils.build_markdown('intro.md'), news=utils.build_markdown('news.md'), 
-        interests=utils.build_markdown('interests.md'), 
+    contents = []
+    for content in data['contents']:
+        try:
+            contents.append([content['id'], content['title'], utils.build_markdown(content['file_name'])])
+        except FileNotFoundError:
+            continue
+    return render_template('index.html', data=data, 
+        intro=utils.build_markdown('intro.md'),  
         publications=utils.build_publications(data['publications'], data['name']['en_name']),
-        award=utils.build_markdown('award.md'))
+        contents=contents)
