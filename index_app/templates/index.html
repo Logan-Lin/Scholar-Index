@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+
         {% for content_meta in contents %}
         <div class="mdui-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
@@ -52,12 +53,19 @@
             </div>
         </div></div>
         {% endfor %}
+
         <div class="mdui-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
                 <div class="mdui-card-primary"><div class="mdui-card-primary-title">Publications</div></div>
                 <div class="mdui-card-content" id="publications-content">{{publications | safe}}</div>
             </div>
         </div></div>
+
+        <div class="mdui-container-fluid mdui-m-t-4 mdui-m-b-2">
+            <div class="mdui-text-center mdui-text-color-grey-700">
+                {{data['copyright']}}
+            </div>
+        </div>
     </div>
 </body>
 <script src="/static/js/index.js"></script>
