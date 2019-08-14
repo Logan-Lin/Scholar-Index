@@ -12,13 +12,6 @@
     <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
         <div class="mdui-toolbar">
             <div class="mdui-typo-headline">{{data['title']}} Scholar Page</div>
-            {% if data['show_about'] %}
-            <div class="mdui-toolbar-spacer"></div>
-            <a class="mdui-btn mdui-btn-icon mdui-ripple" 
-                mdui-tooltip="{content: 'About'}" mdui-dialog="{target: '#about-dialog'}">
-                <i class="mdui-icon material-icons">info</i>
-            </a>
-            {% endif %}
         </div>
     </header>
 
@@ -34,15 +27,7 @@
                     </div>
                     <div class="mdui-card-content mdui-typo">{{intro | safe}}</div>
                     <div class="mdui-card-actions">
-                        <a class="mdui-btn mdui-ripple" href="mailto:{{data['intro-links']['email']}}">
-                            <i class="mdui-icon material-icons">email</i>
-                            {{data['intro-links']['email']}}
-                        </a>
-                        <a class="mdui-btn mdui-ripple" href="{{data['intro-links']['scholar']}}" target="_blank">
-                            <i class="mdui-icon material-icons">school</i>
-                            Google Scholar
-                        </a>
-                        {% for intro_link in data['intro-links']['others'] %}
+                        {% for intro_link in data['intro-links'] %}
                         <a class="mdui-btn mdui-ripple" href="{{intro_link[1]}}" target="_blank">{{intro_link[0]}}</a>
                         {% endfor %}
                     </div>
@@ -69,8 +54,11 @@
         </div></div>
 
         <div class="mdui-container-fluid mdui-m-t-4 mdui-m-b-2">
-            <div class="mdui-text-center mdui-text-color-grey-700">
+            <div class="mdui-text-center mdui-text-color-grey-700 mdui-typo">
                 {{data['copyright']}}
+                {% if data['show_about'] %}
+                | <a mdui-dialog="{target: '#about-dialog'}">About</a>
+                {% endif %}
             </div>
         </div>
     </div>

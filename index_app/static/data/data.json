@@ -5,12 +5,8 @@
     "en_name": "Huaiyu Wan"
   },
   "photo": "/static/image/photo.png",
-  "intro-links": {
-    "email": "hywan@bjtu.edu.cn",
-    "scholar": "about:blank",
-    "others": [["Address", "https://surl.amap.com/ZDRIfd1ubb6"], 
-      ["GitHub", "https://github.com/wanhuaiyu"]]
-  },
+  "intro-links": [["Email", "hywan@bjtu.edu.cn"],
+      ["GitHub", "https://github.com/wanhuaiyu"]],
   "publications": {
     "Technique Reports": [
       {
