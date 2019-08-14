@@ -10,7 +10,7 @@ bp = Blueprint('views', __name__)
 data = json.load(open('/workdir/index_app/static/data/data.json', 'r'))
 
 
-@bp.route('/')
+@bp.route(f'/{data["title"].split(" ")[0]}')
 def index():
     contents = []
     for content in data['contents']:
