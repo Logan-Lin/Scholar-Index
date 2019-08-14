@@ -21,4 +21,4 @@ def index():
     return render_template('index.html', data=data, 
         intro=utils.build_markdown('intro.md'),  
         publications=utils.build_publications(data['publications'], data['name']['en_name']),
-        contents=contents)
+        contents=contents, about=utils.build_markdown('/workdir/readme.md', True))

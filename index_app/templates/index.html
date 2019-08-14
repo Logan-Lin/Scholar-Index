@@ -12,6 +12,13 @@
     <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
         <div class="mdui-toolbar">
             <div class="mdui-typo-headline">{{data['title']}} Scholar Page</div>
+            {% if data['show_about'] %}
+            <div class="mdui-toolbar-spacer"></div>
+            <a class="mdui-btn mdui-btn-icon mdui-ripple" 
+                mdui-tooltip="{content: 'About'}" mdui-dialog="{target: '#about-dialog'}">
+                <i class="mdui-icon material-icons">info</i>
+            </a>
+            {% endif %}
         </div>
     </header>
 
@@ -67,6 +74,16 @@
             </div>
         </div>
     </div>
+
+    {% if data['show_about'] %}
+    <div class="mdui-dialog" id="about-dialog">
+        <div class="mdui-dialog-title">About Scholar Index Template</div>
+        <div class="mdui-dialog-content mdui-typo">{{about | safe}}</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+        </div>
+    </div>
+    {% endif %}
 </body>
 <script src="/static/js/index.js"></script>
 </html>
