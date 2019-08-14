@@ -4,31 +4,9 @@
     "cn_name": "万怀宇",
     "en_name": "Huaiyu Wan"
   },
-  "photo": "/static/image/photo.png",
-  "intro-links": [["Email", "hywan@bjtu.edu.cn"],
+  "photo": "/static/image/8793.jpg",
+  "intro-links": [["Email", "mailto:hywan@bjtu.edu.cn"],
       ["GitHub", "https://github.com/wanhuaiyu"]],
-  "publications": {
-    "Technique Reports": [
-      {
-        "title": "A PyTorch Semantic Segmentation Toolbox",
-        "authors": ["Zilong Huang", "Huaiyu Wan", "Yan Lin", "Wenyu Liu"],
-        "to": "IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019",
-        "links": [["PDF", "https://loganlin.top"], ["Code", "https://loganlin.top"]]
-      },
-      {
-        "title": "CCNet: Criss-Cross Attention for Semantic Segmentation",
-        "authors": ["Yan Lin", "Yunchao Wei", "Wenyu Liu"]
-      }
-    ],
-    "2019": [
-      {
-        "title": "CCNet: Criss-Cross Attention for Semantic Segmentation",
-        "authors": ["Chang Huang", "Yunchao Wei", "Yan Lin"],
-        "links": [["arxiv", "https://loganlin.top"], ["Code", "https://loganlin.top"]],
-        "note": "We provide PyTorch implementations for DeeplabV3 and PSPNet."
-      }
-    ]
-  },
   "contents": [
     {
       "title": "Short Bio",
@@ -46,7 +24,7 @@
       "id": "news"
     },
     {
-      "title": "Research Experience & Academic Services",
+      "title": "Research Experience",
       "file_name": "research.md",
       "id": "research"
     },
@@ -54,8 +32,116 @@
       "title": "Main Admin Duty",
       "file_name": "duty.md",
       "id": "duty"
+    },
+    {
+      "title": "Academic Services",
+      "file_name": "academic.md",
+      "id": "academic"
+    },
+    {
+      "title": "Honors & Awards",
+      "file_name": "honor.md",
+      "id": "honor"
     }
   ],
   "copyright": "©️Huaiyu Wan",
-  "show_about": true
+  "show_about": true,
+
+  "publications": {
+    "2019": [
+      {
+        "title": "Shengnan Guo, Youfang Lin, Shijie Li, Zhaoming Chen, Huaiyu Wan(*). Deep Spatial-Temporal 3D Convolutional Neural Networks for Traffic Data Forecasting. IEEE Transactions on Intelligent Transportation Systems (TITS). 2019, Accepted. (SCIE, IF=4.051, An1)"
+      },
+      {
+        "title": "Huaiyu Wan(*), Fuchen Li, Shengnan Guo, Zhong Cao, Youfang Lin. Learning Time-Aware Distributed Representations of Locations from Spatio-Temporal Trajectories. The 24th International Conference on Database Systems for Advanced Applications (DASFAA). 2019. (CCF B类会议)"
+      },
+      {
+        "title": "Shengnan Guo, Youfang Lin, Ning Feng, Chao Song, Huaiyu Wan(*). Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting. The 33rd AAAI Conference on Artificial Intelligence (AAAI). 2019. (CCF A类会议)",
+        "links": [["Code", "https://github.com/wanhuaiyu/ASTGCN"], ["Slides", "https://github.com/wanhuaiyu/ASTGCN/raw/master/ASTGCN_ppt.pdf"],
+          ["Data", "https://github.com/wanhuaiyu/ASTGCN/tree/master/data"]]
+      },
+      {
+        "title": "Huaiyu Wan, Yutao Zhang, Jing Zhang, Jie Tang(*). AMiner: Search and Mining of Academic Social Networks. Data Intelligence (DI). 2019. 1(1): 58-76."
+      },
+      {
+        "title": "冯宁, 郭晟楠, 宋超, 朱琪超, 万怀宇(*). 面向交通流量预测的多组件时空图卷积网络. 软件学报, 2019, 30(3): 759-769​.",
+        "links": [["代码", "https://github.com/wanhuaiyu/ASTGCN"], ["数据集", "https://github.com/wanhuaiyu/ASTGCN/tree/master/data"]]
+      },
+      {
+        "title": "郭晟楠, 林友芳, 金文蔚, 万怀宇(*). 基于时空循环卷积网络的城市区域人口流量预测. 计算机科学, 2019, 46 (6A): 385-391."
+      },
+      {
+        "title": "林友芳, 尹康, 党毅, 郭晟楠, 万怀宇(*). 基于时空LSTM的OD客运需求预测. 北京交通大学学报, 2019, 43(1): 114-121."
+      }
+    ],
+    "2018": [
+      {
+        "title": "马语丹, 赵义, 金婧, 万怀宇(*). 结合实体共现信息与句子语义特征的关系抽取方法. 中国科学: 信息科学, 2018, 48(11): 1533-1545."
+      },
+      {
+        "title": "林友芳, 康友隐, 万怀宇(*), 吴丽娜, 张宇翔. 基于深度时空卷积网络的民航需求预测. 北京交通大学学报, 2018, 42(2): 1-8."
+      },
+      {
+        "title": "张东雷,  林友芳, 万怀宇(*), 马语丹, 陆金梁. 在线技术社区的用户技能与兴趣发现. 第六届全国社会媒体处理大会(SMP 2017). 中文信息学报. 2018, 32(7), 116-127."
+      },
+      {
+        "title": "常耀成, 张宇翔, 王红, 万怀宇, 肖春景. 特征驱动的关键词提取算法综述. 软件学报, 2018, 29(7): 2046-2070."
+      }
+    ],
+    "2017": [
+      {
+        "title": "许强永, 林友芳, 万怀宇(*), 吴丽娜, 贾旭光. 基于用户在线查询行为分析的民航异常需求发现. 第五届全国社会媒体处理大会(SMP 2016). 中国科学: 信息科学. 2017, 47(8): 1023-1035."
+      }
+    ],
+    "2016": [
+      {
+        "title": "Huaiyu Wan, Marie-Francine Moens, Walter Luyten, Xuezhong Zhou, Qiaozhu Mei, Lu Liu, Jie Tang(*). Extracting Relations from Traditional Chinese Medicine Literature via Heterogeneous Entity Networks. Journal of the American Medical Informatics Association (JAMIA). 2016, 23(2): 356-365. (IF=3.428, An1)"
+      }
+    ],
+    "2015": [
+      {
+        "title": "Huaiyu Wan, Zhiwei Wang, Youfang Lin, Xuguang Jia, Yuanwei Zhou. Discovering Family Groups in Passenger Social Networks. Journal of Computer Science and Technology (JCST). 2015, 30(5): 1141-1153. (SCIE, IF=0.672, An4)"
+      },
+      {
+        "title": "Youfang Lin, Huaiyu Wan(*), Rui Jiang, Zhihao Wu, Xuguang Jia. Inferring the Travel Purposes of Passenger Groups for Better Understanding of Passengers. IEEE Transactions on Intelligent Transportation Systems (TITS). 2015, 16(1): 235-243. (SCIE, IF=2.472, An2)"
+      }
+    ],
+    "2014": [
+      {
+        "title": "林友芳, 王琨琨, 周超, 万怀宇, 武志昊. 基于社交网络的民航旅客偏好建模. 北京交通大学学报, 2014, 38(6): 33-39."
+      }, 
+      {
+        "title": "林友芳, 张奥爽, 万怀宇, 武志昊. 一种基于社交网络的民航新旅客成长性预测方法. 北京交通大学学报, 2014, 38(6): 40-46."
+      }
+    ],
+    "2012": [
+      {
+        "title": "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. Discovering Typed Communities in Mobile Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)"
+      },
+      {
+        "title": "Zhihao Wu, Youfang Lin, Steve Gregory, Huaiyu Wan, Shengfeng Tian. Balanced Multi-Label Propagation for Overlapping Community Detection in Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)"
+      },
+      {
+        "title": "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian, Keyun Hu. Efficient Overlapping Community Detection in Huge Real-world Networks. Physica A: Statistical Mechanics and its Applications (Physica A). 2012, 391(7): 2475-2490. (SCIE, IF=1.732, An3)"
+      }
+    ],
+    "2011": [
+      {
+        "title": "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. A Community-Based Pseudolikelihood Approach for Relationship Labeling in Social Networks. The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD). 2011. (CCF B类会议)"
+      },
+      {
+        "title": "Huaiyu Wan, Youfang Lin, Caiyan Jia, Houkuan Huang. Community-based relational Markov networks in complex networks. The 6th Conference on Rough Sets and Knowledge Technology (RSKT). 2011."
+      }
+    ],
+    "2010": [
+      {
+        "title": "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian. A fast and Reasonable Method for Community Detection with Adjustable Extent of Overlapping. The International Conference on Intelligent Systems and Knowledge Engineering (RSKE). 2010."
+      }
+    ],
+    "2009": [
+      {
+        "title": "万怀宇, 林友芳, 黄厚宽. 社会网络中的链接稳定性预测问题研究. 北京交通大学学报, 2009, 33(5): 99-103."
+      }
+    ]
+  }
 }

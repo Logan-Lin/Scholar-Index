@@ -37,7 +37,7 @@
 
         {% for content_meta in contents %}
         <div class="mdui-row"><div class="mdui-col-xs-12">
-            <div class="mdui-card mdui-hoverable">
+            <div class="mdui-card mdui-hoverable links-to-blank">
                 <div class="mdui-card-primary"><div class="mdui-card-primary-title">{{content_meta[1]}}</div></div>
                 <div class="mdui-card-content mdui-typo" id="{{content_meta[0]}}-content">
                     {{content_meta[2] | safe}}

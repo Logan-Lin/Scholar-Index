@@ -15,30 +15,34 @@ def build_markdown(filename, full_dir=False):
         return markdown_dom
 
 
-def build_publications(publications, admin_name):
+def build_publications(publications, en_name, cn_name):
     pub_dom = ''
     for publication_topic, publication_list in publications.items():
         pub_dom += f'<div class="mdui-typo"><h4 class="mdui-m-t-1 mdui-m-b-0">{publication_topic}</h4></div>' + \
             '<ul class="mdui-list">'
         publication_doms = []
         for publication in publication_list:
-            author_strings = [f'<strong>{author}</strong>' if author==admin_name else author for author in publication['authors']]
+            publication_split = publication['title'].split('.')
+            author_raw = publication_split[0]
+            title_raw = publication_split[1]
+            to_raw = ""
+            for split_row in publication_split[2:]:
+                to_raw += split_row
+
+            author_strings = [f'<strong>{author}</strong>' if en_name in author or cn_name in author
+                else author for author in author_raw.split(',')]
 
             to_string = ''
-            if 'to' in publication:
-                to_string = f'{publication["to"]}<br>' 
+            if len(to_raw) > 0:
+                to_string = f'{to_raw}<br>' 
 
             link_string = ''
             if 'links' in publication:
                 link_string = ' '.join([f'<a href="{link[1]}" target="_blank">{link[0]}</a>' for link in publication['links']]) + '<br>'
 
-            note_string = ''
-            if 'note' in publication:
-                note_string = f'<strong>Note: </strong>{publication["note"]}<br>'
-
             publication_doms.append('<li class="mdui-list-item publication-item"><p class="mdui-typo">' + \
-                f'<strong>{publication["title"]}</strong><br>' + \
+                f'<strong>{title_raw}</strong><br>' + \
                 ', '.join(author_strings) + '<br>' + \
-                to_string +  link_string +  note_string + '</p></li>')
+                to_string +  link_string + '</p></li>')
         pub_dom += '<li class="mdui-divider"></li>'.join(publication_doms) + '</ul>'
     return pub_dom

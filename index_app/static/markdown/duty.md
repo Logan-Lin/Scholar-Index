@@ -1,1 +1,2 @@
-学院的行政职务
+- Associate Professor, Doctoral Supervisor at Beijing Jiaotong University
+- Deputy director at Department of Computer Science, School of Computer and Information Technology, Beijing Jiaotong University

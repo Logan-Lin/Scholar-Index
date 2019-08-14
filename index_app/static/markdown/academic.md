@@ -1,0 +1,7 @@
+- 中国中文信息学会社会媒体处理专委会 （CIPS-SMP）委员
+- 期刊 Data Intelligence 编委
+- SMPCUP 2016、2017、2018 联合主席
+- WSDM 2018、2019 PC Member
+- SMP 2014、2016、2017、2018 程序委员会委员
+- BigNet 2016 PC Member
+- SCIENCE CHINA Infomation Sciences、Journal of Computer Science and Technology、Social Network Analysis and Mining、《中国科学：信息科学》审稿人
