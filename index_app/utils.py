@@ -38,7 +38,7 @@ def build_publications(publications, en_name, cn_name):
 
             link_string = ''
             if 'links' in publication:
-                link_string = ' '.join([f'<a href="{link[1]}" target="_blank">{link[0]}</a>' for link in publication['links']]) + '<br>'
+                link_string = ' '.join([f'<a href="{link[1]}">{link[0]}</a>' for link in publication['links']]) + '<br>'
 
             publication_doms.append('<li class="mdui-list-item publication-item"><p class="mdui-typo">' + \
                 f'<strong>{title_raw}</strong><br>' + \
