@@ -1,10 +1,8 @@
-FROM continuumio/anaconda3:latest
-ENV PATH /opt/conda/bin:$PATH
+FROM python:3.7.4
+ENV PATH /usr/local/bin/:$PATH
 ENV ACC "-i https://pypi.tuna.tsinghua.edu.cn/simple"
-RUN pip install flask_sqlalchemy ${ACC} && \
-    pip install waitress ${ACC} && \
-    pip install Markdown ${ACC} && \
-    rm -rf ~/.cache/pip
+COPY requirements.txt ./
+RUN pip install -r requirements.txt ${ACC} && rm -rf ~/.cache/pip
 RUN mkdir /workdir
 WORKDIR /workdir
 COPY . .

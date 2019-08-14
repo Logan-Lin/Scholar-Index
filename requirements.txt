@@ -1,0 +1,4 @@
+flask_sqlalchemy
+waitress
+Markdown
+Frozen-Flask
