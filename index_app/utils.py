@@ -25,9 +25,7 @@ def build_publications(publications, en_name, cn_name):
             publication_split = publication['title'].split('.')
             author_raw = publication_split[0]
             title_raw = publication_split[1]
-            to_raw = ""
-            for split_row in publication_split[2:]:
-                to_raw += split_row
+            to_raw = ".".join(publication_split[2:])
 
             author_strings = [f'<strong>{author}</strong>' if en_name in author or cn_name in author
                 else author for author in author_raw.split(',')]
