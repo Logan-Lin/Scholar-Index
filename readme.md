@@ -15,7 +15,7 @@
 
     bash build.sh <附加ID> <服务端口号>
 
-将自动构建docker image，并启动名为`scholar_index_<附加ID>`的容器。此时访问`localhost:<服务端口号>/<First Name>`应该能够看到页面。
+将自动构建docker image，并启动名为`scholar_index_<附加ID>`的容器。此时访问`localhost:<服务端口号>`应该能够看到页面。
 
 修改内容后，需要更新页面，只需在命令行中运行：
 
