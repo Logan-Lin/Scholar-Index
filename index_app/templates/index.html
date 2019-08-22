@@ -9,7 +9,7 @@
     <script src="/static/module/jquery-3.3.1.min.js"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-theme-accent-indigo mdui-color-grey-100">
-    <div class="mdui-invisible" id='top-row'></div>
+    <div class="mdui-invisible" id="top-row"></div>
     <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
         <div class="mdui-toolbar">
             <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#nav-drawer'}">
@@ -19,7 +19,7 @@
         </div>
     </header>
 
-    <div class="mdui-drawer mdui-drawer-close mdui-shadow-2" id="nav-drawer">
+    <div class="mdui-drawer mdui-drawer-close mdui-shadow-1 mdui-color-grey-50" id="nav-drawer">
         <ul class="mdui-list" id="nav-list">
             {% for content_meta in contents %}
             <a href="#{{content_meta[0]}}-anchor">
