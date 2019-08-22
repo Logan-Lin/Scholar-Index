@@ -6,5 +6,6 @@ def create_app():
 
     from . import views
     app.register_blueprint(views.bp)
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
 
     return app

@@ -9,13 +9,31 @@
     <script src="/static/module/jquery-3.3.1.min.js"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-theme-accent-indigo mdui-color-grey-100">
+    <div class="mdui-invisible" id='top-row'></div>
     <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-indigo">
         <div class="mdui-toolbar">
+            <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#nav-drawer'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
             <div class="mdui-typo-headline">{{data['title']}} Scholar Page</div>
         </div>
     </header>
 
-    <div class="mdui-container-fluid" id="main-container">
+    <div class="mdui-drawer mdui-drawer-close mdui-shadow-2" id="nav-drawer">
+        <ul class="mdui-list" id="nav-list">
+            {% for content_meta in contents %}
+            <a href="#{{content_meta[0]}}-anchor">
+                <li class="mdui-list-item mdui-ripple">{{content_meta[1]}}</li>
+            </a>
+            {% endfor %}
+            <div class="mdui-divider"></div>
+            <a href="#publications-anchor">
+                <li class="mdui-list-item mdui-ripple">Publications</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mdui-container" id="main-container">
         <div class="mdui-row">
             <div class="mdui-col-xs-3">
                 <img class="mdui-img-fluid mdui-img-rounded mdui-shadow-2 mdui-hoverable" src="{{ data['photo'] }}">
@@ -36,7 +54,8 @@
         </div>
 
         {% for content_meta in contents %}
-        <div class="mdui-row"><div class="mdui-col-xs-12">
+        <div class="jump-anchor mdui-invisible" id="{{content_meta[0]}}-anchor"></div>
+        <div class="mdui-row" id="{{content_meta[0]}}-nav-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
                 <div class="mdui-card-primary"><div class="mdui-card-primary-title">{{content_meta[1]}}</div></div>
                 <div class="mdui-card-content mdui-typo" id="{{content_meta[0]}}-content">
@@ -46,7 +65,8 @@
         </div></div>
         {% endfor %}
 
-        <div class="mdui-row"><div class="mdui-col-xs-12">
+        <div class="jump-anchor mdui-invisible" id="publications-anchor"></div>
+        <div class="mdui-row" id="publications-row"><div class="mdui-col-xs-12">
             <div class="mdui-card mdui-hoverable">
                 <div class="mdui-card-primary"><div class="mdui-card-primary-title">Publications</div></div>
                 <div class="mdui-card-content" id="publications-content">{{publications | safe}}</div>
@@ -62,6 +82,10 @@
             </div>
         </div>
     </div>
+
+    <a href='#top-row'><button class="mdui-fab mdui-fab-mini mdui-fab-fixed mdui-ripple mdui-color-amber">
+        <i class="mdui-icon material-icons">arrow_upward</i>
+    </button></a>
 
     {% if data['show_about'] %}
     <div class="mdui-dialog links-to-blank" id="about-dialog">

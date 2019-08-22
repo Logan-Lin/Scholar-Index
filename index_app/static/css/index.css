@@ -1,7 +1,7 @@
-#main-container {
+/* #main-container {
     padding-left: 15%;
     padding-right: 15%;
-}
+} */
 
 #main-container .mdui-row {
     margin-bottom: 20px;
@@ -17,4 +17,16 @@
     border-left-style: solid;
     border-left-width: 6px;
     padding-left: 10px;
+}
+
+.jump-anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+}
+
+#top-row {
+    display: block;
+    position: relative;
+    top: -64px;
 }
