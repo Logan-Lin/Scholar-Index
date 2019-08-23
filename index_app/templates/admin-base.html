@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Console</title>
+    <link rel="stylesheet" href="/static/module/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="/static/css/admin-base.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/module/mdui/js/mdui.min.js"></script>
+    <script src="/static/module/jquery-3.3.1.min.js"></script>
+</head>
+<body class="mdui-appbar-with-toolbar mdui-theme-accent-amber mdui-color-grey-100">
+    <header class="mdui-appbar mdui-appbar-fixed mdui-shadow-4 mdui-color-black">
+        <div class="mdui-toolbar">
+            <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#nav-drawer'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
+            <div class="mdui-typo-headline">Admin Console - {{subtitle}}</div>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-btn mdui-btn-icon" id="save-button" mdui-tooltip="{content: 'Save'}">
+                <i class="mdui-icon material-icons">save</i>
+            </div>
+            <div class="mdui-btn mdui-btn-icon" id="logout-button" mdui-tooltip="{content: 'Logout'}">
+                <i class="mdui-icon material-icons">exit_to_app</i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mdui-drawer mdui-drawer-close mdui-shadow-2 mdui-color-grey-50" id='nav-drawer'>
+        {% set admin_navs = [['metadata', 'Meta Data', 'apps'], ['content', 'Contents', 'list'], ['password', 'Password', 'lock_outline']] %}
+        <ul class="mdui-list">
+            <a href='/index'><li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">Home</div>
+            </li></a>
+            <li class="mdui-divider"></li>
+            {% for admin_nav in admin_navs %}
+            <a href='/admin/{{admin_nav[0]}}'><li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">{{admin_nav[2]}}</i>
+                <div class="mdui-list-item-content">{{admin_nav[1]}}</div>
+            </li></a>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="mdui-container" id="main-container">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+<script src="/static/js/admin-base.js"></script>
+</html>

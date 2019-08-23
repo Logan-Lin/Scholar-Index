@@ -1,0 +1,151 @@
+{% extends 'admin-base.html' %}
+{% block content %}
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-content">
+            <div class="mdui-row-sm-1 mdui-row-md-2">
+                {% set metadata_settings = [
+                    ['cn_name', 'Chinese name', 'translate'],
+                    ['en_name', 'English name', 'text_format'], 
+                    ['title', 'Website Title', 'title'],
+                    ['copyright', 'Copyright', 'copyright']] %}
+                {% for metadata_setting in metadata_settings %}
+                <div class="mdui-col">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <i class="mdui-icon material-icons">{{metadata_setting[2]}}</i>
+                        <label class="mdui-textfield-label">{{metadata_setting[1]}}</label>
+                        <input class="mdui-textfield-input" type='text' value="{{metadata[metadata_setting[0]]}}"
+                            id="{{metadata_setting[0]}}-input" required>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-content">
+            <div class="mdui-row-sm-3 mdui-row-md-4">
+                <div class="mdui-list mdui-col">
+                    <label class="mdui-switch mdui-list-item">
+                        <input type="checkbox" id="show-about-swtich" {% if metadata['show_about'] %}checked{% endif %}/>
+                        <i class="mdui-switch-icon"></i>
+                        <span class="mdui-list-item-content mdui-m-l-2">Show 'About' link</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">Links setting
+                <button class="mdui-btn mdui-float-right mdui-color-indigo" id="link-add-btn">
+                    <i class="mdui-icon material-icons">add</i>
+                    Add new link
+                </button>
+            </div>
+        </div>
+        <div class="mdui-card-content"><ul class="mdui-list" id="link-list">
+            {% for link in metadata['intro-links'] %}
+            <li class="mdui-list-item">
+                <div class="mdui-col-xs-4">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Link name</label>
+                        <input class="mdui-textfield-input link-name-input" type="text" value="{{link[0]}}" required>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-7">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">Link URL</label>
+                        <input class="mdui-textfield-input link-url-input" type="text" value="{{link[1]}}" required>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-1">
+                    <button class="mdui-btn mdui-btn-icon link-delete-btn mdui-float-right mdui-color-orange-a200">
+                        <i class="mdui-icon material-icons">delete</i>
+                    </button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul></div>
+    </div>
+</div></div>
+
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">Publications management
+                <button class="mdui-btn mdui-float-right mdui-color-indigo" id="publication-add-topic-btn">
+                    <i class="mdui-icon material-icons">add</i>
+                    Add new topic
+                </button>
+            </div>
+        </div>
+        <div class="mdui-card-content">
+            <div class="mdui-panel" id="publication-panel" mdui-panel>
+                {% for publications in metadata['publications'] %}
+                <div class="mdui-panel-item publication-panel-item">
+                    <div class="mdui-panel-item-header">
+                        <div class="mdui-panel-item-title publication-panel-title">{{publications['topic']}}</div>
+                        <div class="mdui-panel-item-summary publication-panel-date">{{publications['date']}}</div>
+                        <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </div>
+                    <div class="mdui-panel-item-body">
+                        <div class="mdui-row-sm-2 mdui-row-md-3">
+                            <div class="mdui-col">
+                                <div class="mdui-textfield">
+                                    <label class="mdui-textfield-label">Topic name</label>
+                                    <input class="mdui-textfield-input publication-topic-input" type="text" value="{{publications['topic']}}" required>
+                                </div>
+                            </div>
+                            <div class="mdui-col">
+                                <div class="mdui-textfield">
+                                    <label class="mdui-textfield-label">Topic date</label>
+                                    <input class="mdui-textfield-input publication-date-input" type="date" value="{{publications['date']}}" required>
+                                </div>
+                            </div>
+                            <div class="mdui-col">
+                                <span class="mdui-float-right">
+                                    <button class="mdui-btn mdui-ripple mdui-text-color-red publication-topic-delete-btn">
+                                        <i class="mdui-icon material-icons">delete</i>
+                                        Delete topic
+                                    </button>
+                                    <button class="mdui-btn mdui-ripple publication-add-article-btn">
+                                        <i class="mdui-icon material-icons">add</i>
+                                        Add article
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mdui-divider mdui-m-y-2"></div>
+                        <ul class="mdui-list publication-list">
+                            {% for article in publications['articles']%}
+                            <li class="mdui-list-item">
+                                <div class="mdui-col-xs-11">
+                                    <div class="mdui-textfield">
+                                        <textarea class="mdui-textfield-input publication-cite-input" required placeholder="Publication cite">{{article}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="mdui-col-xs-1">
+                                    <button class="mdui-btn mdui-btn-icon publication-delete-btn mdui-float-right mdui-color-orange-a200">
+                                        <i class="mdui-icon material-icons">delete</i>
+                                    </button>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<script src='/static/js/admin-metadata.js'></script>
+{% endblock %}

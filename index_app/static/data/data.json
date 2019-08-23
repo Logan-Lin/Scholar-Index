@@ -1,12 +1,23 @@
 {
-  "title": "Huaiyu Wan",
-  "name": {
-    "cn_name": "万怀宇",
-    "en_name": "Huaiyu Wan"
-  },
+  "title": "Huaiyu Wan Scholar Page",
+  "cn_name": "\u4e07\u6000\u5b87",
+  "en_name": "Huaiyu Wan",
   "photo": "/static/image/8793.jpg",
-  "intro-links": [["Email", "mailto:hywan@bjtu.edu.cn"],
-      ["GitHub", "https://github.com/wanhuaiyu"]],
+  "intro-links": [
+    [
+      "Email",
+      "mailto:hywan@bjtu.edu.cn"
+    ],
+    [
+      "GitHub",
+      "https://github.com/wanhuaiyu"
+    ],
+    [
+      "BJTU Index",
+      "http://faculty.bjtu.edu.cn/8793/"
+    ]
+  ],
+  "password-sha256": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
   "contents": [
     {
       "title": "Short Bio",
@@ -44,104 +55,92 @@
       "id": "honor"
     }
   ],
-  "copyright": "©️Huaiyu Wan",
-  "show_about": true,
-
-  "publications": {
-    "2019": [
-      {
-        "title": "Shengnan Guo, Youfang Lin, Shijie Li, Zhaoming Chen, Huaiyu Wan(*). Deep Spatial-Temporal 3D Convolutional Neural Networks for Traffic Data Forecasting. IEEE Transactions on Intelligent Transportation Systems (TITS). 2019, Accepted. (SCIE, IF=4.051, An1)"
-      },
-      {
-        "title": "Huaiyu Wan(*), Fuchen Li, Shengnan Guo, Zhong Cao, Youfang Lin. Learning Time-Aware Distributed Representations of Locations from Spatio-Temporal Trajectories. The 24th International Conference on Database Systems for Advanced Applications (DASFAA). 2019. (CCF B类会议)"
-      },
-      {
-        "title": "Shengnan Guo, Youfang Lin, Ning Feng, Chao Song, Huaiyu Wan(*). Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting. The 33rd AAAI Conference on Artificial Intelligence (AAAI). 2019. (CCF A类会议)",
-        "links": [["Code", "https://github.com/wanhuaiyu/ASTGCN"], ["Slides", "https://github.com/wanhuaiyu/ASTGCN/raw/master/ASTGCN_ppt.pdf"],
-          ["Data", "https://github.com/wanhuaiyu/ASTGCN/tree/master/data"]]
-      },
-      {
-        "title": "Huaiyu Wan, Yutao Zhang, Jing Zhang, Jie Tang(*). AMiner: Search and Mining of Academic Social Networks. Data Intelligence (DI). 2019. 1(1): 58-76."
-      },
-      {
-        "title": "冯宁, 郭晟楠, 宋超, 朱琪超, 万怀宇(*). 面向交通流量预测的多组件时空图卷积网络. 软件学报, 2019, 30(3): 759-769​.",
-        "links": [["代码", "https://github.com/wanhuaiyu/ASTGCN"], ["数据集", "https://github.com/wanhuaiyu/ASTGCN/tree/master/data"]]
-      },
-      {
-        "title": "郭晟楠, 林友芳, 金文蔚, 万怀宇(*). 基于时空循环卷积网络的城市区域人口流量预测. 计算机科学, 2019, 46 (6A): 385-391."
-      },
-      {
-        "title": "林友芳, 尹康, 党毅, 郭晟楠, 万怀宇(*). 基于时空LSTM的OD客运需求预测. 北京交通大学学报, 2019, 43(1): 114-121."
-      }
-    ],
-    "2018": [
-      {
-        "title": "马语丹, 赵义, 金婧, 万怀宇(*). 结合实体共现信息与句子语义特征的关系抽取方法. 中国科学: 信息科学, 2018, 48(11): 1533-1545."
-      },
-      {
-        "title": "林友芳, 康友隐, 万怀宇(*), 吴丽娜, 张宇翔. 基于深度时空卷积网络的民航需求预测. 北京交通大学学报, 2018, 42(2): 1-8."
-      },
-      {
-        "title": "张东雷,  林友芳, 万怀宇(*), 马语丹, 陆金梁. 在线技术社区的用户技能与兴趣发现. 第六届全国社会媒体处理大会(SMP 2017). 中文信息学报. 2018, 32(7), 116-127."
-      },
-      {
-        "title": "常耀成, 张宇翔, 王红, 万怀宇, 肖春景. 特征驱动的关键词提取算法综述. 软件学报, 2018, 29(7): 2046-2070."
-      }
-    ],
-    "2017": [
-      {
-        "title": "许强永, 林友芳, 万怀宇(*), 吴丽娜, 贾旭光. 基于用户在线查询行为分析的民航异常需求发现. 第五届全国社会媒体处理大会(SMP 2016). 中国科学: 信息科学. 2017, 47(8): 1023-1035."
-      }
-    ],
-    "2016": [
-      {
-        "title": "Huaiyu Wan, Marie-Francine Moens, Walter Luyten, Xuezhong Zhou, Qiaozhu Mei, Lu Liu, Jie Tang(*). Extracting Relations from Traditional Chinese Medicine Literature via Heterogeneous Entity Networks. Journal of the American Medical Informatics Association (JAMIA). 2016, 23(2): 356-365. (IF=3.428, An1)"
-      }
-    ],
-    "2015": [
-      {
-        "title": "Huaiyu Wan, Zhiwei Wang, Youfang Lin, Xuguang Jia, Yuanwei Zhou. Discovering Family Groups in Passenger Social Networks. Journal of Computer Science and Technology (JCST). 2015, 30(5): 1141-1153. (SCIE, IF=0.672, An4)"
-      },
-      {
-        "title": "Youfang Lin, Huaiyu Wan(*), Rui Jiang, Zhihao Wu, Xuguang Jia. Inferring the Travel Purposes of Passenger Groups for Better Understanding of Passengers. IEEE Transactions on Intelligent Transportation Systems (TITS). 2015, 16(1): 235-243. (SCIE, IF=2.472, An2)"
-      }
-    ],
-    "2014": [
-      {
-        "title": "林友芳, 王琨琨, 周超, 万怀宇, 武志昊. 基于社交网络的民航旅客偏好建模. 北京交通大学学报, 2014, 38(6): 33-39."
-      }, 
-      {
-        "title": "林友芳, 张奥爽, 万怀宇, 武志昊. 一种基于社交网络的民航新旅客成长性预测方法. 北京交通大学学报, 2014, 38(6): 40-46."
-      }
-    ],
-    "2012": [
-      {
-        "title": "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. Discovering Typed Communities in Mobile Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)"
-      },
-      {
-        "title": "Zhihao Wu, Youfang Lin, Steve Gregory, Huaiyu Wan, Shengfeng Tian. Balanced Multi-Label Propagation for Overlapping Community Detection in Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)"
-      },
-      {
-        "title": "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian, Keyun Hu. Efficient Overlapping Community Detection in Huge Real-world Networks. Physica A: Statistical Mechanics and its Applications (Physica A). 2012, 391(7): 2475-2490. (SCIE, IF=1.732, An3)"
-      }
-    ],
-    "2011": [
-      {
-        "title": "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. A Community-Based Pseudolikelihood Approach for Relationship Labeling in Social Networks. The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD). 2011. (CCF B类会议)"
-      },
-      {
-        "title": "Huaiyu Wan, Youfang Lin, Caiyan Jia, Houkuan Huang. Community-based relational Markov networks in complex networks. The 6th Conference on Rough Sets and Knowledge Technology (RSKT). 2011."
-      }
-    ],
-    "2010": [
-      {
-        "title": "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian. A fast and Reasonable Method for Community Detection with Adjustable Extent of Overlapping. The International Conference on Intelligent Systems and Knowledge Engineering (RSKE). 2010."
-      }
-    ],
-    "2009": [
-      {
-        "title": "万怀宇, 林友芳, 黄厚宽. 社会网络中的链接稳定性预测问题研究. 北京交通大学学报, 2009, 33(5): 99-103."
-      }
-    ]
-  }
+  "copyright": "\u00a9\ufe0fHuaiyu Wan",
+  "show_about": false,
+  "publications": [
+    {
+      "topic": "2019",
+      "date": "2019-08-23",
+      "articles": [
+        "Shengnan Guo, Youfang Lin, Shijie Li, Zhaoming Chen, Huaiyu Wan(*). Deep Spatial-Temporal 3D Convolutional Neural Networks for Traffic Data Forecasting. IEEE Transactions on Intelligent Transportation Systems (TITS). 2019, Accepted. (SCIE, IF=4.051, An1)",
+        "Huaiyu Wan(*), Fuchen Li, Shengnan Guo, Zhong Cao, Youfang Lin. Learning Time-Aware Distributed Representations of Locations from Spatio-Temporal Trajectories. The 24th International Conference on Database Systems for Advanced Applications (DASFAA). 2019. (CCF B\u7c7b\u4f1a\u8bae)",
+        "Shengnan Guo, Youfang Lin, Ning Feng, Chao Song, Huaiyu Wan(*). Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting. The 33rd AAAI Conference on Artificial Intelligence (AAAI). 2019. (CCF A\u7c7b\u4f1a\u8bae)|Code,https://github.com/wanhuaiyu/ASTGCN| Slides,https://github.com/wanhuaiyu/ASTGCN/raw/master/ASTGCN_ppt.pdf|Data,https://github.com/wanhuaiyu/ASTGCN/tree/master/data",
+        "Huaiyu Wan, Yutao Zhang, Jing Zhang, Jie Tang(*). AMiner: Search and Mining of Academic Social Networks. Data Intelligence (DI). 2019. 1(1): 58-76.",
+        "\u51af\u5b81, \u90ed\u665f\u6960, \u5b8b\u8d85, \u6731\u742a\u8d85, \u4e07\u6000\u5b87(*). \u9762\u5411\u4ea4\u901a\u6d41\u91cf\u9884\u6d4b\u7684\u591a\u7ec4\u4ef6\u65f6\u7a7a\u56fe\u5377\u79ef\u7f51\u7edc. \u8f6f\u4ef6\u5b66\u62a5, 2019, 30(3): 759-769\u200b.",
+        "\u90ed\u665f\u6960, \u6797\u53cb\u82b3, \u91d1\u6587\u851a, \u4e07\u6000\u5b87(*). \u57fa\u4e8e\u65f6\u7a7a\u5faa\u73af\u5377\u79ef\u7f51\u7edc\u7684\u57ce\u5e02\u533a\u57df\u4eba\u53e3\u6d41\u91cf\u9884\u6d4b. \u8ba1\u7b97\u673a\u79d1\u5b66, 2019, 46 (6A): 385-391.",
+        "\u6797\u53cb\u82b3, \u5c39\u5eb7, \u515a\u6bc5, \u90ed\u665f\u6960, \u4e07\u6000\u5b87(*). \u57fa\u4e8e\u65f6\u7a7aLSTM\u7684OD\u5ba2\u8fd0\u9700\u6c42\u9884\u6d4b. \u5317\u4eac\u4ea4\u901a\u5927\u5b66\u5b66\u62a5, 2019, 43(1): 114-121."
+      ]
+    },
+    {
+      "topic": "2018",
+      "date": "",
+      "articles": [
+        "\u9a6c\u8bed\u4e39, \u8d75\u4e49, \u91d1\u5a67, \u4e07\u6000\u5b87(*). \u7ed3\u5408\u5b9e\u4f53\u5171\u73b0\u4fe1\u606f\u4e0e\u53e5\u5b50\u8bed\u4e49\u7279\u5f81\u7684\u5173\u7cfb\u62bd\u53d6\u65b9\u6cd5. \u4e2d\u56fd\u79d1\u5b66: \u4fe1\u606f\u79d1\u5b66, 2018, 48(11): 1533-1545.",
+        "\u6797\u53cb\u82b3, \u5eb7\u53cb\u9690, \u4e07\u6000\u5b87(*), \u5434\u4e3d\u5a1c, \u5f20\u5b87\u7fd4. \u57fa\u4e8e\u6df1\u5ea6\u65f6\u7a7a\u5377\u79ef\u7f51\u7edc\u7684\u6c11\u822a\u9700\u6c42\u9884\u6d4b. \u5317\u4eac\u4ea4\u901a\u5927\u5b66\u5b66\u62a5, 2018, 42(2): 1-8.",
+        "\u5f20\u4e1c\u96f7,  \u6797\u53cb\u82b3, \u4e07\u6000\u5b87(*), \u9a6c\u8bed\u4e39, \u9646\u91d1\u6881. \u5728\u7ebf\u6280\u672f\u793e\u533a\u7684\u7528\u6237\u6280\u80fd\u4e0e\u5174\u8da3\u53d1\u73b0. \u7b2c\u516d\u5c4a\u5168\u56fd\u793e\u4f1a\u5a92\u4f53\u5904\u7406\u5927\u4f1a(SMP 2017). \u4e2d\u6587\u4fe1\u606f\u5b66\u62a5. 2018, 32(7), 116-127.",
+        "\u5e38\u8000\u6210, \u5f20\u5b87\u7fd4, \u738b\u7ea2, \u4e07\u6000\u5b87, \u8096\u6625\u666f. \u7279\u5f81\u9a71\u52a8\u7684\u5173\u952e\u8bcd\u63d0\u53d6\u7b97\u6cd5\u7efc\u8ff0. \u8f6f\u4ef6\u5b66\u62a5, 2018, 29(7): 2046-2070."
+      ]
+    },
+    {
+      "topic": "2017",
+      "date": "",
+      "articles": [
+        "\u8bb8\u5f3a\u6c38, \u6797\u53cb\u82b3, \u4e07\u6000\u5b87(*), \u5434\u4e3d\u5a1c, \u8d3e\u65ed\u5149. \u57fa\u4e8e\u7528\u6237\u5728\u7ebf\u67e5\u8be2\u884c\u4e3a\u5206\u6790\u7684\u6c11\u822a\u5f02\u5e38\u9700\u6c42\u53d1\u73b0. \u7b2c\u4e94\u5c4a\u5168\u56fd\u793e\u4f1a\u5a92\u4f53\u5904\u7406\u5927\u4f1a(SMP 2016). \u4e2d\u56fd\u79d1\u5b66: \u4fe1\u606f\u79d1\u5b66. 2017, 47(8): 1023-1035."
+      ]
+    },
+    {
+      "topic": "2016",
+      "date": "",
+      "articles": [
+        "Huaiyu Wan, Marie-Francine Moens, Walter Luyten, Xuezhong Zhou, Qiaozhu Mei, Lu Liu, Jie Tang(*). Extracting Relations from Traditional Chinese Medicine Literature via Heterogeneous Entity Networks. Journal of the American Medical Informatics Association (JAMIA). 2016, 23(2): 356-365. (IF=3.428, An1)"
+      ]
+    },
+    {
+      "topic": "2015",
+      "date": "",
+      "articles": [
+        "Huaiyu Wan, Zhiwei Wang, Youfang Lin, Xuguang Jia, Yuanwei Zhou. Discovering Family Groups in Passenger Social Networks. Journal of Computer Science and Technology (JCST). 2015, 30(5): 1141-1153. (SCIE, IF=0.672, An4)",
+        "Youfang Lin, Huaiyu Wan(*), Rui Jiang, Zhihao Wu, Xuguang Jia. Inferring the Travel Purposes of Passenger Groups for Better Understanding of Passengers. IEEE Transactions on Intelligent Transportation Systems (TITS). 2015, 16(1): 235-243. (SCIE, IF=2.472, An2)"
+      ]
+    },
+    {
+      "topic": "2014",
+      "date": "",
+      "articles": [
+        "\u6797\u53cb\u82b3, \u738b\u7428\u7428, \u5468\u8d85, \u4e07\u6000\u5b87, \u6b66\u5fd7\u660a. \u57fa\u4e8e\u793e\u4ea4\u7f51\u7edc\u7684\u6c11\u822a\u65c5\u5ba2\u504f\u597d\u5efa\u6a21. \u5317\u4eac\u4ea4\u901a\u5927\u5b66\u5b66\u62a5, 2014, 38(6): 33-39.",
+        "\u6797\u53cb\u82b3, \u5f20\u5965\u723d, \u4e07\u6000\u5b87, \u6b66\u5fd7\u660a. \u4e00\u79cd\u57fa\u4e8e\u793e\u4ea4\u7f51\u7edc\u7684\u6c11\u822a\u65b0\u65c5\u5ba2\u6210\u957f\u6027\u9884\u6d4b\u65b9\u6cd5. \u5317\u4eac\u4ea4\u901a\u5927\u5b66\u5b66\u62a5, 2014, 38(6): 40-46."
+      ]
+    },
+    {
+      "topic": "2012",
+      "date": "",
+      "articles": [
+        "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. Discovering Typed Communities in Mobile Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)",
+        "Zhihao Wu, Youfang Lin, Steve Gregory, Huaiyu Wan, Shengfeng Tian. Balanced Multi-Label Propagation for Overlapping Community Detection in Social Networks. Journal of Computer Science and Technology (JCST). 2012, 27(3): 480-491. (SCIE, IF=0.672, An4)",
+        "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian, Keyun Hu. Efficient Overlapping Community Detection in Huge Real-world Networks. Physica A: Statistical Mechanics and its Applications (Physica A). 2012, 391(7): 2475-2490. (SCIE, IF=1.732, An3)"
+      ]
+    },
+    {
+      "topic": "2011",
+      "date": "",
+      "articles": [
+        "Huaiyu Wan, Youfang Lin, Zhihao Wu, Houkuan Huang. A Community-Based Pseudolikelihood Approach for Relationship Labeling in Social Networks. The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD). 2011. (CCF B\u7c7b\u4f1a\u8bae)",
+        "Huaiyu Wan, Youfang Lin, Caiyan Jia, Houkuan Huang. Community-based relational Markov networks in complex networks. The 6th Conference on Rough Sets and Knowledge Technology (RSKT). 2011."
+      ]
+    },
+    {
+      "topic": "2010",
+      "date": "",
+      "articles": [
+        "Zhihao Wu, Youfang Lin, Huaiyu Wan, Shengfeng Tian. A fast and Reasonable Method for Community Detection with Adjustable Extent of Overlapping. The International Conference on Intelligent Systems and Knowledge Engineering (RSKE). 2010."
+      ]
+    },
+    {
+      "topic": "2009",
+      "date": "",
+      "articles": [
+        "\u4e07\u6000\u5b87, \u6797\u53cb\u82b3, \u9ec4\u539a\u5bbd. \u793e\u4f1a\u7f51\u7edc\u4e2d\u7684\u94fe\u63a5\u7a33\u5b9a\u6027\u9884\u6d4b\u95ee\u9898\u7814\u7a76. \u5317\u4eac\u4ea4\u901a\u5927\u5b66\u5b66\u62a5, 2009, 33(5): 99-103."
+      ]
+    }
+  ]
 }

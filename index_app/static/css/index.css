@@ -1,8 +1,3 @@
-/* #main-container {
-    padding-left: 15%;
-    padding-right: 15%;
-} */
-
 #main-container .mdui-row {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -29,4 +24,8 @@
     display: block;
     position: relative;
     top: -64px;
+}
+
+#admin-login-dialog {
+    width: 400px;
 }

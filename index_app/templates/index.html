@@ -15,7 +15,7 @@
             <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#nav-drawer'}">
                 <i class="mdui-icon material-icons">menu</i>
             </button>
-            <div class="mdui-typo-headline">{{data['title']}} Scholar Page</div>
+            <div class="mdui-typo-headline">{{data['title']}}</div>
         </div>
     </header>
 
@@ -41,7 +41,7 @@
             <div class="mdui-col-xs-9">
                 <div class="mdui-card mdui-hoverable">
                     <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">{{data['name']['en_name']}} {{data['name']['cn_name']}}</div>
+                        <div class="mdui-card-primary-title">{{data['en_name']}} {{data['cn_name']}}</div>
                     </div>
                     <div class="mdui-card-content mdui-typo">{{intro | safe}}</div>
                     <div class="mdui-card-actions">
@@ -79,6 +79,11 @@
                 {% if data['show_about'] %}
                 | <a mdui-dialog="{target: '#about-dialog'}">About</a>
                 {% endif %}
+                {% if admin %}
+                | <a href="./admin">Admin</a>
+                {% else %}
+                | <a mdui-dialog="{target: '#admin-login-dialog'}">Admin</a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -96,6 +101,25 @@
         </div>
     </div>
     {% endif %}
+
+    <div class="mdui-dialog" id="admin-login-dialog">
+        <div class="mdui-dialog-title">Admin Login</div>
+        <div class="mdui-dialog-content">
+            <div class="mdui-container">
+                <div class="mdui-row">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <i class="mdui-icon material-icons">lock</i>
+                        <label class="mdui-textfield-label" for="admin-password">Password</label>
+                        <input class="mdui-textfield-input" id="admin-password" type="password">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" id="admin-login-confirm">OK</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>Cancel</button>
+        </div>
+    </div>
 </body>
 <script src="/static/js/index.js"></script>
 </html>
