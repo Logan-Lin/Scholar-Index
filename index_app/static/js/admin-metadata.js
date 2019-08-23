@@ -1,14 +1,14 @@
 $('#link-add-btn').on('click', function() {
     $('#link-list').append(`<li class="mdui-list-item">
             <div class="mdui-col-xs-4">
-                <div class="mdui-textfield mdui-textfield-floating-label">
-                    <label class="mdui-textfield-label">Link name</label>
+                <div class="mdui-textfield">
+                    <label class="mdui-textfield-label">Name</label>
                     <input class="mdui-textfield-input link-name-input" type="text" value="" required>
                 </div>
             </div>
             <div class="mdui-col-xs-7">
-                <div class="mdui-textfield mdui-textfield-floating-label">
-                    <label class="mdui-textfield-label">Link URL</label>
+                <div class="mdui-textfield">
+                    <label class="mdui-textfield-label">URL</label>
                     <input class="mdui-textfield-input link-url-input" type="text" value="" required>
                 </div>
             </div>
@@ -70,7 +70,7 @@ $('#publication-add-topic-btn').on('click', function() {
             <div class="mdui-panel-item-body">
                 <div class="mdui-row-sm-2 mdui-row-md-3">
                     <div class="mdui-col">
-                        <div class="mdui-textfield mdui-textfield-floating-label">
+                        <div class="mdui-textfield">
                             <label class="mdui-textfield-label">Topic name</label>
                             <input class="mdui-textfield-input publication-topic-input" type="text" value="" required>
                         </div>
@@ -123,7 +123,6 @@ $('#save-button').on('click', function() {
             articles: articles
         });
     });
-    console.log(publications);
 
     $.ajax({
         method: 'POST',

@@ -1,0 +1,33 @@
+{% extends 'admin-base.html' %}
+{% block content %}
+<style>
+    #edit-textarea {
+        border-color: #BCAAA4;
+        border-style: solid;
+        border-width: 1px;
+    }
+</style>
+
+<span class="mdui-hidden" id="filename">{{filename}}</span>
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">Editing file {{filename}}
+                <a href="/admin/content">
+                    <button class="mdui-btn mdui-float-right mdui-color-indigo">
+                        <i class="mdui-icon material-icons">arrow_back</i>
+                        Back to console
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="mdui-card-content">
+            <div class="mdui-textfield">
+                <textarea class="mdui-textfield-input mdui-color-grey-50 mdui-p-a-2" id="edit-textarea">{{content | safe}}</textarea>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<script src="/static/js/admin-markdown-edit.js"></script>
+{% endblock %}

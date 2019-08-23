@@ -11,7 +11,7 @@
                     ['copyright', 'Copyright', 'copyright']] %}
                 {% for metadata_setting in metadata_settings %}
                 <div class="mdui-col">
-                    <div class="mdui-textfield mdui-textfield-floating-label">
+                    <div class="mdui-textfield">
                         <i class="mdui-icon material-icons">{{metadata_setting[2]}}</i>
                         <label class="mdui-textfield-label">{{metadata_setting[1]}}</label>
                         <input class="mdui-textfield-input" type='text' value="{{metadata[metadata_setting[0]]}}"
@@ -46,7 +46,7 @@
             <div class="mdui-card-primary-title">Links setting
                 <button class="mdui-btn mdui-float-right mdui-color-indigo" id="link-add-btn">
                     <i class="mdui-icon material-icons">add</i>
-                    Add new link
+                    Add link
                 </button>
             </div>
         </div>
@@ -54,14 +54,14 @@
             {% for link in metadata['intro-links'] %}
             <li class="mdui-list-item">
                 <div class="mdui-col-xs-4">
-                    <div class="mdui-textfield mdui-textfield-floating-label">
-                        <label class="mdui-textfield-label">Link name</label>
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">Name</label>
                         <input class="mdui-textfield-input link-name-input" type="text" value="{{link[0]}}" required>
                     </div>
                 </div>
                 <div class="mdui-col-xs-7">
-                    <div class="mdui-textfield mdui-textfield-floating-label">
-                        <label class="mdui-textfield-label">Link URL</label>
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">URL</label>
                         <input class="mdui-textfield-input link-url-input" type="text" value="{{link[1]}}" required>
                     </div>
                 </div>

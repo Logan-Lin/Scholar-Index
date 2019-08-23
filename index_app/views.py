@@ -83,3 +83,27 @@ def metadata_modify():
     if request.method == 'POST':
         update_metadata(request.get_json())
         return jsonify({'message': 'success'})
+
+@bp.route('/edit-md/<filename>')
+def edit_md(filename):
+    if session['user'] == 'admin':
+        filename += '.md'
+        file_dir = os.path.join('/', 'workdir', 'index_app', 'static', 'markdown', filename)
+        file_content = ""
+        if os.path.exists(file_dir):
+            with open(file_dir, 'r') as file_pt:
+                file_content = file_pt.read()
+
+        return render_template('admin-markdown-edit.html', filename=filename, content=file_content,
+            subtitle='Editting')
+    else:
+        return index()
+
+@bp.route('/save-md/<filename>', methods=['GET', 'POST'])
+def save_md(filename):
+    if request.method == 'POST' and session['user'] == 'admin':
+        file_content = request.json['content']
+        file_dir = os.path.join('/', 'workdir', 'index_app', 'static', 'markdown', filename)
+        with open(file_dir, 'w') as file_pt:
+            file_pt.write(file_content)
+        return jsonify({'message': 'success'})

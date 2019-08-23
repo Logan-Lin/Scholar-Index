@@ -1,4 +1,48 @@
 {% extends 'admin-base.html' %}
 {% block content %}
+<div class="mdui-row"><div class="mdui-col-xs-12">
+    <div class="mdui-card mdui-hoverable">
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">
+                Content management
+                <button class="mdui-btn mdui-float-right mdui-color-indigo" id="content-add-button">
+                    <i class="mdui-icon material-icons">add</i>
+                    Add content
+                </button>
+            </div>
+        </div>
+        <div class="mdui-card-content">
+            <ul class="mdui-list" id="content-list">
+                {% for content in metadata['contents'] %}
+                <li class="mdui-list-item content-list-item">
+                    <div class="mdui-col-xs-5">
+                        <div class="mdui-textfield">
+                            <label class="mdui-textfield-label">Title</label>
+                            <input class="mdui-textfield-input content-title-input" type="text" value="{{content['title']}}" required>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-5">
+                        <div class="mdui-textfield">
+                            <label class="mdui-textfield-label">ID</label>
+                            <input class="mdui-textfield-input content-id-input" type="text" value="{{content['id']}}" required>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-1">
+                        <button class="mdui-btn mdui-btn-icon mdui-color-amber content-edit-btn mdui-float-right">
+                            <i class="mdui-icon material-icons">edit</i>
+                        </button>
+                    </div>
+                    <div class="mdui-col-xs-1">
+                        <button class="mdui-btn mdui-btn-icon mdui-color-orange-a200 content-delete-btn mdui-float-right">
+                            <i class="mdui-icon material-icons">delete</i>
+                        </button>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div></div>
 
+<script src="/static/js/admin-content.js"></script>
 {% endblock %}
