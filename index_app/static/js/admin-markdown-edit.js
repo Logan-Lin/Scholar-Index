@@ -13,3 +13,7 @@ $('#save-button').on('click', function() {
         }
     })
 })
+
+if ($('#filename').text() === 'intro.md') {
+    $('#back-to-console-link').prop('href', '/admin/metadata');
+}

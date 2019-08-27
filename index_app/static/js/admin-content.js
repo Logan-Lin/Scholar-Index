@@ -1,13 +1,19 @@
 $('#content-add-button').on('click', function() {
     $('#content-list').append(`
         <li class="mdui-list-item content-list-item">
+            <div class="mdui-col-xs-1">
+                <label class="mdui-switch">
+                    <input class="content-show-switch" type="checkbox" checked/>
+                    <i class="mdui-switch-icon"></i>
+                </label>
+            </div>
             <div class="mdui-col-xs-5">
                 <div class="mdui-textfield">
                     <label class="mdui-textfield-label">Title</label>
                     <input class="mdui-textfield-input content-title-input" type="text" value="" required>
                 </div>
             </div>
-            <div class="mdui-col-xs-5">
+            <div class="mdui-col-xs-4">
                 <div class="mdui-textfield">
                     <label class="mdui-textfield-label">ID</label>
                     <input class="mdui-textfield-input content-id-input" type="text" value="" required>
@@ -39,7 +45,8 @@ function fetchAllContents() {
         contents.push({
             title: $(this).find('.content-title-input').val(),
             "file_name": id + '.md',
-            id: $(this).find('.content-id-input').val()
+            id: $(this).find('.content-id-input').val(),
+            show: $(this).find('.content-show-switch').prop('checked')
         });
     })
     return contents;

@@ -15,13 +15,19 @@
             <ul class="mdui-list" id="content-list">
                 {% for content in metadata['contents'] %}
                 <li class="mdui-list-item content-list-item">
+                    <div class="mdui-col-xs-1">
+                        <label class="mdui-switch">
+                            <input class="content-show-switch" type="checkbox" {% if content['show'] %} checked {% endif %}/>
+                            <i class="mdui-switch-icon"></i>
+                        </label>
+                    </div>
                     <div class="mdui-col-xs-5">
                         <div class="mdui-textfield">
                             <label class="mdui-textfield-label">Title</label>
                             <input class="mdui-textfield-input content-title-input" type="text" value="{{content['title']}}" required>
                         </div>
                     </div>
-                    <div class="mdui-col-xs-5">
+                    <div class="mdui-col-xs-4">
                         <div class="mdui-textfield">
                             <label class="mdui-textfield-label">ID</label>
                             <input class="mdui-textfield-input content-id-input" type="text" value="{{content['id']}}" required>

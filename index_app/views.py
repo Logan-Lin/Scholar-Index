@@ -17,10 +17,11 @@ data = json.load(open(metadata_filedir, 'r'))
 def index():
     contents = []
     for content in data['contents']:
-        try:
-            contents.append([content['id'], content['title'], utils.build_markdown(content['file_name'])])
-        except FileNotFoundError:
-            continue
+        if content['show']:
+            try:
+                contents.append([content['id'], content['title'], utils.build_markdown(content['file_name'])])
+            except FileNotFoundError:
+                continue
     
     if 'user' not in session:
         session['user'] = ""

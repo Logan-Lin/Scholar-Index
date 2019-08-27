@@ -28,12 +28,18 @@
     <div class="mdui-card mdui-hoverable">
         <div class="mdui-card-content">
             <div class="mdui-row-sm-3 mdui-row-md-4">
-                <div class="mdui-list mdui-col">
-                    <label class="mdui-switch mdui-list-item">
+                <div class="mdui-list">
+                    <label class="mdui-switch mdui-list-item mdui-col mdui-m-r-2">
                         <input type="checkbox" id="show-about-swtich" {% if metadata['show_about'] %}checked{% endif %}/>
                         <i class="mdui-switch-icon"></i>
                         <span class="mdui-list-item-content mdui-m-l-2">Show 'About' link</span>
                     </label>
+                    <a href="/edit-md/intro">
+                        <button class="mdui-btn mdui-list-item mdui-col mdui-m-r-2" id="edit-intro-btn">
+                            <i class="mdui-icon material-icons">edit</i>
+                            Edit Intro content
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -43,7 +49,7 @@
 <div class="mdui-row"><div class="mdui-col-xs-12">
     <div class="mdui-card mdui-hoverable">
         <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Links setting
+            <div class="mdui-card-primary-title">Links management
                 <button class="mdui-btn mdui-float-right mdui-color-indigo" id="link-add-btn">
                     <i class="mdui-icon material-icons">add</i>
                     Add link

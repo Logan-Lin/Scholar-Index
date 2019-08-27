@@ -22,37 +22,44 @@
     {
       "title": "Short Bio",
       "file_name": "bio.md",
-      "id": "bio"
+      "id": "bio",
+      "show": true
     },
     {
       "title": "Research Interests",
       "file_name": "interests.md",
-      "id": "interests"
+      "id": "interests",
+      "show": true
     },
     {
       "title": "News",
       "file_name": "news.md",
-      "id": "news"
+      "id": "news",
+      "show": true
     },
     {
       "title": "Research Experience",
       "file_name": "research.md",
-      "id": "research"
+      "id": "research",
+      "show": true
     },
     {
       "title": "Main Admin Duty",
       "file_name": "duty.md",
-      "id": "duty"
+      "id": "duty",
+      "show": true
     },
     {
       "title": "Academic Services",
       "file_name": "academic.md",
-      "id": "academic"
+      "id": "academic",
+      "show": true
     },
     {
       "title": "Honors & Awards",
       "file_name": "honor.md",
-      "id": "honor"
+      "id": "honor",
+      "show": true
     }
   ],
   "copyright": "\u00a9\ufe0fHuaiyu Wan",
