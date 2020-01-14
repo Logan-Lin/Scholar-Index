@@ -81,7 +81,7 @@ def update_metadata(new_data_dict):
 
 @bp.route('/metadata-modify', methods=['GET', 'POST'])
 def metadata_modify():
-    if request.method == 'POST':
+    if request.method == 'POST' and session['user'] == 'admin':
         update_metadata(request.get_json())
         return jsonify({'message': 'success'})
 
@@ -107,4 +107,14 @@ def save_md(filename):
         file_dir = os.path.join('/', 'workdir', 'index_app', 'static', 'markdown', filename)
         with open(file_dir, 'w') as file_pt:
             file_pt.write(file_content)
+        return jsonify({'message': 'success'})
+
+@bp.route('/upload_file', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST' and session['user'] == 'admin':
+        photo = request.files['photo']
+        photo_path = os.path.join('static', 'image', photo.filename)
+        photo.save(os.path.join('index_app', photo_path))
+        update_metadata({'photo': photo_path})
+
         return jsonify({'message': 'success'})
